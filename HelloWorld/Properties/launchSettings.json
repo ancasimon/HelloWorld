@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "HelloWorld": {
+      "commandName": "Project"
+    },
+    "newProfile1": {
+      "commandName": "Executable",
+      "commandLineArgs": "Southern Romanian Midwestern"
+    }
+  }
+}
