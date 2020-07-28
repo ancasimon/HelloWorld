@@ -72,29 +72,32 @@ namespace HelloWorld
                 //Console.WriteLine(syllableCount);
                 if (syllableCount > 2)
                 {
-                    Console.WriteLine($"The {animals[i]} has {syllableCount} syllables!");
+                    Console.WriteLine($"The name of the {animals[i]} has {syllableCount} syllables!");
                 }
             
             }
 
 
             //TASK #4 in the exercise:
-            //STILL NOT SURE: how exactly do I define args? I tried to do it in Properties but it's not reading it!!!
-            //var args = new string[] { "Southern", "Romanian", "Midwestern" };
-
-            //if (args.Length == 0)
-            //{
-            //display message to user to provide parameters
-            //System.Console.WriteLine("please enter dialect");
+            
+            Console.WriteLine("Please select a dialect: Southern, Romanian, Midwestern?");
+            var inputDialect = Console.ReadLine();
             //Console.Read(); //XXXX/why Read and not ReadLine???
-            //}
-            //else
-            //{
-            //loop through array to list args parameters.
-            //for (int i = 0; i < args.Length; i++)
-            //{
-            //Console.Write(args[i] + Environment.NewLine);
-            //}
+            
+            if (inputDialect == "Southern")
+            {
+                Console.WriteLine("Howdy!");
+            } else if (inputDialect == "Romanian")
+            {
+                Console.WriteLine("Buna ziua!");
+            } else if (inputDialect == "Midwestern")
+            {
+                Console.WriteLine("Wanna come with?");
+            } else
+            {
+                Console.WriteLine("Check your spelling! You didn't pick one of the available options!");
+            }
+            
             //keep the console window open after the program has run:
             //Console.Read();
             //}
