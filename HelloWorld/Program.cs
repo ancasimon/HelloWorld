@@ -72,7 +72,7 @@ namespace HelloWorld
                 //Console.WriteLine(syllableCount);
                 if (syllableCount > 2)
                 {
-                    Console.WriteLine(animals[i]);
+                    Console.WriteLine($"The {animals[i]} has {syllableCount} syllables!");
                 }
             
             }
