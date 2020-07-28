@@ -8,20 +8,45 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            //TASK #1 in the exercise:
-            //Console.WriteLine("Howdy Y'all!!");
+            //TASK #1 in the Hello World exercise:
+            Console.WriteLine("Howdy Y'all!!");
             //Console.ReadKey(); // What happens if you run the app without this line? - ARS: You get additional information about the code ...such as that the executable exited with code 0 - what does that mean??
 
+            //Console Input exercise - part 1 :
+            Console.WriteLine("What is your name?");
+            var userName = Console.ReadLine();
+            Console.WriteLine($"Hello, {userName}! Welcome to our world!");
 
-            //TASK #2 in the exercies:
-            //var animals = new string[] { "Triceratops", "Gorilla", "Corgi", "Toucan" };
-            //foreach(var animal in animals)
-            //{
-            //    Console.WriteLine(animal);
-            //}
+            //TASK #2 in the Hello World exercise:
+            var animalSet = new string[] { "Triceratops", "Gorilla", "Corgi", "Toucan" };
+            foreach(var animal in animalSet)
+            {
+                Console.WriteLine(animal);
+            }
+
+            //Console Input exercise - part 2 :
+            Console.WriteLine("What is your favorite color?");
+            var userColor = Console.ReadLine();
+            //Console.WriteLine($"Your favorite color is: {userColor}");
+            //Generate random integer and use it as an index to retrieve a string value from the animalSet array:
+            Random rnd = new Random();
+            //FIRST: generate random indexes for pet names:
+            int animalSetIndex = rnd.Next(animalSet.Length);
+            //Display the result:
+            Console.WriteLine($"Would you like to have a {userColor} {animalSet[animalSetIndex]}?");
+
+            //Console Input exercise - practice:
+            ConsoleKeyInfo enteredKey;
+            do
+            {
+                enteredKey = Console.ReadKey();
+                Console.WriteLine($"You pressed the {enteredKey.Key.ToString()} key");
+                Console.WriteLine("consolekey object", enteredKey); //WHY CAN I not console the object??
+            } while (enteredKey.Key != ConsoleKey.Escape);
 
 
-            //TASK #3 in the exercise:
+
+            //TASK #3 in the Hello World exercise:
             var animals = new string[] { "Triceratops", "Gorilla", "Corgi", "Toucan" };
             
             int CountSyllables(string word)
@@ -78,8 +103,8 @@ namespace HelloWorld
             }
 
 
-            //TASK #4 in the exercise:
-            
+            //TASK #4 in the  Hello World exercise:
+
             Console.WriteLine("Please select a dialect: Southern, Romanian, Midwestern?");
             var inputDialect = Console.ReadLine();
             //Console.Read(); //XXXX/why Read and not ReadLine???
